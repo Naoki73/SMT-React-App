@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color:#c1b492;
+  letter-spacing: 7px;
+  -webkit-font-smoothing: none;
+  display: block;
+  
+}
+
+.darker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('./components/images/bg_darker\ \(1\).gif') ;
+  animation: darkestDown 80s linear infinite;
+}
+
+
+.dark {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  background: rgba(0, 0, 0, 0);
+  background-image: url('./components/images/bg_dark_anim_0_08.gif');
+ 
+  animation: darkest 60s linear infinite;
+}
+
+.opacity {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.0);
+  animation: opacityBg 0.3s linear forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes opacityBg {
+  from {
+	  background-color:rgba(0,0,0,0.0);
+  }
+  to {
+	  background-color:rgba(0,0,0,0.6);
+	  }
+}
+
+@keyframes darkest {
+  from {
+	  background-position-y:1024px;
+  }
+  to {
+	   background-position-x:-1024px;
+	  }
+ }
+
+@keyframes darkestDown {
+  from {
+	  background-position-y:-1024px;
+  }
+  to {
+	   background-position-x:1024px;
+	  }
+ }
+
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
