@@ -22,8 +22,7 @@ export default class Catch extends Component {
     const data = await res.json();
     console.log(data)
     if (data.status==='ok'){
-        this.setState({demons:data.Demons})
-        
+      this.setState({demons:data.Demons})
     }
 
     

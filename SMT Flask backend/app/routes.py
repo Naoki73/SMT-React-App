@@ -22,6 +22,9 @@ def index():
 
 @app.route('/demons')
 def demons():
+
+    demondata["status"] = "ok"
+
     return demondata
 
 @app.route('/skills')
