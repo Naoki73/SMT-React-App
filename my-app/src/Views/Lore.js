@@ -4,17 +4,6 @@ export default class Lore extends Component {
   render() {
     return (
 
-    <div>
-            <h1>Log In</h1>
-            <form onSubmit={handleSubmit}>
-                <input name='username' />
-                <input name='password' type='password' />
-                <button type='submit'>Sign Up</button>
-
-
-            </form>
-    </div>
-
 
       
       <div className="card" style={{width: "18rem"}}>

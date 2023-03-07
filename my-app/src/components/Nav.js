@@ -14,13 +14,32 @@ export default class Nav extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                        <Link className="nav-link active" aria-current="page" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/">Home</Link>
-                            <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Login">Login</Link>
-                            <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Signup">Signup</Link>
+                            <Link className="nav-link active" aria-current="page" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/">Home</Link>
+                            
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Catch">Catch</Link>
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Battle">Battle</Link>
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Lore">Lore</Link>
-                            <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Profile">Profile</Link>
+
+                            {/* {
+                            this.props.user.apitoken
+                            ?
+                            <>
+                             <Link className="nav-link" to="/login" onClick={this.props.logMeOut}>Log Out</Link>
+                             <p className='nav-link'>Hello, {this.props.user.username}</p>
+                             </>
+                            :
+                            
+                            <>
+
+                            
+
+                            <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Login">Login</Link>
+                            <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Signup">Signup</Link>
+
+                            </>
+
+                            } */}
+                            
                         </div>
                     </div>
                 </div>

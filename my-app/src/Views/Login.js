@@ -1,47 +1,48 @@
-import React, { Component } from 'react';
-import Footer from '../components/Footer';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default class Login extends Component {
-  render() {
-    return (
+export default function Login({logMeIn}) {
+  const navigate = useNavigate()
+
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      const username = e.target.username.value;
+      const password = e.target.password.value;
+      
+
+      const url = 'http://127.0.0.1:5000/api/login'
+      const options = {
+          method: "POST",
+          headers: {
+              Authorization: `Basic ${btoa(username+':'+password)}`
+          }
+      }
+  
+
+      const res = await fetch(url, options);
+      const data = await res.json();
+      console.log(data)
+      if (data.status === 'ok') {
+          logMeIn(data.user) 
+          navigate('/')        
+      }
+
+  };
+
+  return (
       <div>
-        <div>Login</div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        
-      </div> 
-    )
-  }
+          <h1>Log In</h1>
+          <form onSubmit={handleSubmit}>
+              <input name='username' />
+              <input name='password' type='password' />
+              <button type='submit'>Sign Up</button>
+
+
+          </form>
+
+
+
+      </div>
+  )
 }
