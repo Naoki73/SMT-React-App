@@ -16,14 +16,14 @@ export default function Login({logMeIn}) {
           method: "POST",
           headers: {
               Authorization: `Basic ${btoa(username+':'+password)}`
-          }
-      }
+            }
+        }
   
 
       const res = await fetch(url, options);
       const data = await res.json();
       console.log(data)
-      if (data.status === 'ok') {
+      if (data.status == 'ok') {
           logMeIn(data.user) 
           navigate('/')        
       }
@@ -36,7 +36,7 @@ export default function Login({logMeIn}) {
           <form onSubmit={handleSubmit}>
               <input name='username' />
               <input name='password' type='password' />
-              <button type='submit'>Sign Up</button>
+              <button type='submit'>Log in</button>
 
 
           </form>

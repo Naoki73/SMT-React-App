@@ -1,7 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
-
+from secrets import token_hex
 from datetime import timezone, datetime
+from werkzeug.security import generate_password_hash
 
 db = SQLAlchemy()
 
@@ -31,6 +32,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(15), nullable=False, unique=True)
     email = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(250), nullable=False)
+    apitoken = db.Column(db.String)
     date_created = db.Column(db.DateTime, default=datetime.now(timezone.utc))
     demon = db.relationship("Demon", 
         secondary = user_comp, 
@@ -39,7 +41,8 @@ class User(db.Model, UserMixin):
     def __init__(self, username,  email, password):
         self.username = username
         self.email = email
-        self.password = password
+        self.password = generate_password_hash(password)
+        self.apitoken = token_hex(16)
 
     
 
@@ -51,23 +54,31 @@ class User(db.Model, UserMixin):
         self.demon.append(caught_demon)
         db.session.commit()
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'username' : self.username,
+            'email' : self.email,
+            'apitoken' : self.apitoken
+        }
+
 class Skill(db.Model):
     __tablename__ = "Skill"
     skill_id = db.Column(db.Integer, primary_key=True)
     skill_name = db.Column(db.String(60), nullable=False, unique=True)
-    Type = db.Column(db.String(50), nullable=False, unique=True)
-    Affinity = db.Column(db.String(50), nullable=False)
-    Power = db.Column(db.Integer, nullable=False)
-    Range = db.Column(db.String(50), nullable=False)
+    type = db.Column(db.String(50), nullable=False, unique=True)
+    affinity = db.Column(db.String(50), nullable=False)
+    power = db.Column(db.Integer, nullable=False)
+    range = db.Column(db.String(50), nullable=False)
     
 
 
-    def __init__(self, skill_name, Type, Affinity, Power, Range):
+    def __init__(self, skill_name, type, affinity, power, range):
         self.skill_name = skill_name
-        self.Type = Type
-        self.Affinity = Affinity
-        self.Power = Power
-        self.Range = Range
+        self.type = type
+        self.affinity = affinity
+        self.power = power
+        self.range = range
 
     def saveToDB(self):
         db.session.add(self)
@@ -78,32 +89,30 @@ class Demon(db.Model):
     __tablename__ ="Demon"
     demon_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    Image = db.Column(db.String(200), nullable=False)
-    HP = db.Column(db.Integer, nullable=False)
-    Strength = db.Column(db.Integer, nullable=False)
-    Magic = db.Column(db.Integer, nullable=False)
-    Defense = db.Column(db.Integer, nullable=False)
-    Weak = db.Column(db.String(50), nullable=False)
-    Null = db.Column(db.String(50), nullable=False)
-    Repel = db.Column(db.String(50), nullable=False)
-    Lore = db.Column(db.String(1000), nullable=False)
+    hp = db.Column(db.Integer, nullable=False)
+    strength = db.Column(db.Integer, nullable=False)
+    magic = db.Column(db.Integer, nullable=False)
+    defense = db.Column(db.Integer, nullable=False)
+    weak = db.Column(db.String(50), nullable=False)
+    null = db.Column(db.String(50), nullable=False)
+    repel = db.Column(db.String(50), nullable=False)
+    lore = db.Column(db.String(1000), nullable=False)
     skills = db.relationship("Skill", 
         secondary = demons_skills, 
         backref= "demons_skills", lazy="dynamic")
 
 
 
-    def __init__(self, name, Image, HP, Strength, Magic, Defense, Weak, Null, Repel, Lore):
+    def __init__(self, name, hp, strength, magic, defense, weak, null, repel, lore):
         self.name = name
-        self.Image = Image
-        self.HP = HP
-        self.Strength = Strength
-        self.Magic = Magic
-        self.Defense = Defense
-        self.Weak = Weak
-        self.Null = Null
-        self.Repel = Repel
-        self.Lore = Lore
+        self.hp = hp
+        self.strength = strength
+        self.magic = magic
+        self.defense = defense
+        self.weak = weak
+        self.null = null
+        self.repel = repel
+        self.lore = lore
 
     def saveToDB(self):
         db.session.add(self)

@@ -15,16 +15,18 @@ export default class Catch extends Component {
 
 
   showDemons = () => {
-    return this.state.demons.map(p => <Demon key={p.id} demonInfo={p}/>)
+    return this.state.demons.map(p => <Demon key={p.id} demonInfo={p} catchDemons={this.catchDemons} user={this.props.user}/>)
   };
 
-  getDemons = async () => {
+  getDemons = async (demon_name) => {
     // const name = e.target.name.value;
-    // const hp = e.target.HP.value;
+    // const hp = e.target.hp.value;
 
+  
+    const url = `http://127.0.0.1:5000/demon/${demon_name}`
 
+    const res = await fetch(url);
 
-    const res = await fetch('http://127.0.0.1:5000/demons');
     // const options = {
     //   method: "POST",
     //   headers: {
@@ -33,18 +35,20 @@ export default class Catch extends Component {
     //   body: JSON.stringify({
     //     name: name,
 
+
     //   })
     // }
     const data = await res.json();
     console.log(data)
     if (data.status==='ok'){
-      this.setState({demons:data.Demons})
+      this.setState({demons:[data.demon]})
     }
 
     
   }
+
   componentDidMount = () => {
-    this.getDemons();
+    // this.getDemons();
   }
 
   handleInputChange = e => {
@@ -53,14 +57,16 @@ export default class Catch extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const demon = this.state.demons.find(
-      d => d.name.toLowerCase() === this.state.searchInput.toLowerCase()
-    );
-    if (demon) {
-      this.setState({ demons: [demon], searchInput: '' });
-    } else {
-      alert('Demon not found!');
-    }
+    const demon_name = e.target.input1.value
+    this.getDemons(demon_name)
+    // const demon = this.state.demons.find(
+    //   d => d.name.toLowerCase() === this.state.searchInput.toLowerCase()
+    // );
+    // if (demon) {
+    //   this.setState({ demons: [demon], searchInput: '' });
+    // } else {
+    //   alert('Demon not found!');
+    // }
   };
 
 
@@ -75,6 +81,7 @@ export default class Catch extends Component {
             type="text"
             value={this.state.searchInput}
             onChange={this.handleInputChange}
+            name="input1"
           />
         </label>
         <button style={{ fontFamily: 'Sans', fontWeight: 500, letterSpacing: 3, fontSize: 38 }} type="submit">Search</button>

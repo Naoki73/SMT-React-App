@@ -19,13 +19,15 @@ export default class Nav extends Component {
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Catch">Catch</Link>
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Battle">Battle</Link>
                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Lore">Lore</Link>
-
-                            {/* {
+        
+            
+                            { 
+                            
                             this.props.user.apitoken
                             ?
                             <>
-                             <Link className="nav-link" to="/login" onClick={this.props.logMeOut}>Log Out</Link>
-                             <p className='nav-link'>Hello, {this.props.user.username}</p>
+                             <Link className="nav-link" style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} to="/Login" onClick={this.props.logMeOut}>Log Out</Link>
+                             <p className='nav-link' style={{ color: "white", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }} >Hello, {this.props.user.username}</p>
                              </>
                             :
                             
@@ -38,7 +40,7 @@ export default class Nav extends Component {
 
                             </>
 
-                            } */}
+                            }
                             
                         </div>
                     </div>

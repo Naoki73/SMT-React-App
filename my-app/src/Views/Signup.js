@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Navigate } from 'react-router-dom';
 
-export default function SignUp() {
+export default function Signup() {
   const [redirect, setRedirect] = useState(false);
 
   const handleSubmit = async (e) => {

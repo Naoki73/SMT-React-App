@@ -10,27 +10,39 @@
 
 
 
-# print(skill_data)
-# import requests as r
 
-# def finddemon(demon):
-#     # Probably commands here to pull info from elephantsql database
-#     url = "http://127.0.0.1:5000/demons"
-#     response = r.get(url)
-#     if response.ok:
-#         demon_dict = {}
-#         demon_dict['name'] = my_dict['name']
-#         demon_dict['Image'] = my_dict['Image']
-#         demon_dict['HP'] = my_dict['HP']
-#         demon_dict['Strength'] = my_dict['Strength']
-#         demon_dict['Defense'] = my_dict['Defense']
-#         demon_dict['Weak'] = my_dict['Weak']
-#         demon_dict['Null'] = my_dict['Null']
-#         demon_dict['Repel'] = my_dict['Repel']
-#         demon_dict['Lore'] = my_dict['Lore']
-#         return demon_dict
-#     else:
-#         raise Exception("The demon you're looking for does not exist.")
+
+# print(skill_data)
+import requests as r
+from .models import Demon, Skill, db
+
+def finddemon(demonname):
+    demonname = demonname.lower()
+    url = f"http://127.0.0.1:5000/demons"
+    response = r.get(url)
+    if response.ok:
+        my_dict = response.json()
+
+        for demon in my_dict["Demons"]:
+            if demon["name"].lower() == demonname:
+                print(demonname)
+                break
+            
+        print(demon['name'])
+        demon_dict = {}
+        
+        demon_dict['name'] = demon['name']
+        demon_dict['hp'] = demon['hp']
+        demon_dict['strength'] = demon["stats"]["st"]
+        demon_dict['magic'] = demon["stats"]["ma"]
+        demon_dict['defense'] = demon["stats"]["vi"]
+        demon_dict['weak'] = demon['resistances']['weak']
+        demon_dict['null'] = demon['resistances']['null']
+        demon_dict['repel'] = demon['resistances']['repel']
+        demon_dict['lore'] = demon['lore']
+        return demon_dict
+    else:
+        raise Exception("The demon you're looking for does not exist.")
     
 # def get_skill_data(skillname):
 #     #Probably pull from DB to get skill name from the demon table

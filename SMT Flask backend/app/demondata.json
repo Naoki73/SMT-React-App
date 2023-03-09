@@ -8195,7 +8195,7 @@
     "lore": "The mother goddess of Egypt. She is wife and sister to Osiris, god of the underworld.\nKnown for her powerful magic, she could perform miracles such as raising her husband from the dead. As the patron goddess of the dead, her image can be found at many burial sites."
 },
 {
-    "name": "Jack Frost",
+    "name": "JackFrost",
     "affinities": {
         "skillPotential": {
             "Phys": 0,
