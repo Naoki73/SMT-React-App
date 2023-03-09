@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import Demon from '../components/Demon';
+import Lore from './Lore';
 
 
 export default class Catch extends Component {
   constructor() {
     super();
     this.state = {
-        demons: [],
-        searchInput: ''
+      demons: [],
+      searchInput: ''
     }
   };
 
@@ -15,14 +16,17 @@ export default class Catch extends Component {
 
 
   showDemons = () => {
-    return this.state.demons.map(p => <Demon key={p.id} demonInfo={p} catchDemons={this.catchDemons} user={this.props.user}/>)
+    return this.state.demons.map(p =><Demon key={p.id} demonInfo={p} catchDemons={this.catchDemons} user={this.props.user} />
+        
+      
+    )
   };
 
   getDemons = async (demon_name) => {
     // const name = e.target.name.value;
     // const hp = e.target.hp.value;
 
-  
+
     const url = `http://127.0.0.1:5000/demon/${demon_name}`
 
     const res = await fetch(url);
@@ -40,11 +44,11 @@ export default class Catch extends Component {
     // }
     const data = await res.json();
     console.log(data)
-    if (data.status==='ok'){
-      this.setState({demons:[data.demon]})
+    if (data.status === 'ok') {
+      this.setState({ demons: [data.demon] })
     }
 
-    
+
   }
 
   componentDidMount = () => {
@@ -74,24 +78,24 @@ export default class Catch extends Component {
     return (
       <div>
         {this.showDemons()}
-      <form onSubmit={this.handleSubmit}>
-        <label style={{fontSize: 38, display: 'block', marginleft: 'auto', marginright: 'auto'  }}>
-          Search demon:
-          <input
-            type="text"
-            value={this.state.searchInput}
-            onChange={this.handleInputChange}
-            name="input1"
-          />
-        </label>
-        <button style={{ fontFamily: 'Sans', fontWeight: 500, letterSpacing: 3, fontSize: 38 }} type="submit">Search</button>
-      </form>
-      
-    </div>
+        <form onSubmit={this.handleSubmit}>
+          <label style={{ fontSize: 38, display: 'block', marginleft: 'auto', marginright: 'auto' }}>
+            Search demon:
+            <input
+              type="text"
+              value={this.state.searchInput}
+              onChange={this.handleInputChange}
+              name="input1"
+            />
+          </label>
+          <button style={{ fontFamily: 'Sans', fontWeight: 500, letterSpacing: 3, fontSize: 38 }} type="submit">Search</button>
+        </form>
+
+      </div>
     )
   }
 
 
-   
+
 }
 
