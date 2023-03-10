@@ -32,10 +32,10 @@ export default class Demon extends Component {
   render() {
     return (
 
-      <div className="card" style={{ margin: "auto", padding: "1px", width: "24rem", color: "#b454ff", fontSize: "34px", textAlign: "center" }}>
+      <div className="card" style={{ margin: "auto", padding: "1px", width: "24rem", color: "#bb83f2", fontSize: "34px", textAlign: "center" }}>
         <div className="card-body">
           <img src={`http://smt-app1111.b-cdn.net/${this.props.demonInfo.name}.png`} style={{ width: "22rem", imageRendering:"auto" }} />
-          <h5 className="card-title" style={{ fontSize: "80px", color: "#bb83f2", letterSpacing: "2px", lineHeight: "1.5", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }}>{this.props.demonInfo.name}</h5>
+          <h5 className="card-title" style={{ fontSize: "80px", color: "#bb83f2", letterSpacing: "5px", lineHeight: "1.5", textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000" }}>{this.props.demonInfo.name}</h5>
           <p className="card-text" style={{ lineHeight: "0.8" }}>Hp: {this.props.demonInfo.hp}</p>
           {/* <p className="card-text">Alignment:{this.props.demonInfo.alignment.ethical}-{this.props.demonInfo.alignment.moral}</p> */}
           <p className="card-text" style={{ lineHeight: "0.8" }}>Strength: {this.props.demonInfo.strength}</p>

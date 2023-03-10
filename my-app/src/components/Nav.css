@@ -18,3 +18,10 @@ Nav {
 body {
     color:white
 }
+
+.card{
+    background-image:url('./images/360px-SMT-III-Nocturne-ambg.png') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

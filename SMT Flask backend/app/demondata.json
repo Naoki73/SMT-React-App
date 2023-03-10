@@ -7005,8 +7005,8 @@
     "arcana": "Star",
     "race": "Tyrant",
     "level": 87,
-    "hp": "null",
-    "mp": "null",
+    "hp": 423,
+    "mp": 266,
     "stats": {
         "st": 56,
         "vi": 56,
@@ -15436,7 +15436,7 @@
         "moral": "Light",
         "ethical": "Chaos"
     },
-    "lore": "An Aztec creator deity known as the Feathered Serpent.\nHe is identified as the sun and is also known as the god of wind and giver of breath. He is said to have created humans by sprinkling blood on the bones of people from a previously created world, and acts as guardian of their fertility and culture. According to legend, the planet Venus is actually Quetzalcoatl\"s heart."
+    "lore": "A Mexica creator deity known as the Feathered Serpent.\nHe is identified as the sun and is also known as the god of wind and giver of breath. He is said to have created humans by sprinkling blood on the bones of people from a previously created world, and acts as guardian of their fertility and culture. According to legend, the planet Venus is actually Quetzalcoatl\"s heart."
 },
 {
     "name": "Raja Naga",
@@ -18948,8 +18948,8 @@
     "arcana": "Priestess",
     "race": "Tyrant",
     "level": 70,
-    "hp": "null",
-    "mp": "null",
+    "hp": "400",
+    "mp": "246",
     "stats": {
         "st": 46,
         "vi": 41,
@@ -19010,7 +19010,7 @@
         "moral": "Dark",
         "ethical": "Chaos"
     },
-    "lore": "Goddess of Aztec myth who governs night and fear, she symbolizes death and evil. Her wawr with the sun god caused a catastrophic solar eclipse. She seeks a sacrifice every 52 years."
+    "lore": "Goddess of Mexica myth who governs night and fear, she symbolizes death and evil. Her war with the sun god caused a catastrophic solar eclipse. She seeks a sacrifice every 52 years."
 },
 {
     "name": "Ukobach",
@@ -19364,8 +19364,8 @@
     "arcana": "Justice",
     "race": "Divine",
     "level": 33,
-    "hp": "328",
-    "mp": "127",
+    "hp": 328,
+    "mp": 127,
     "stats": {
         "st": 22,
         "vi": 21,

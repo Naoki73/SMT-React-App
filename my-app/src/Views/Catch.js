@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Demon from '../components/Demon';
-import Lore from './Lore';
+
 
 
 export default class Catch extends Component {
