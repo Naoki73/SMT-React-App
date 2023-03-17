@@ -14542,8 +14542,8 @@
     "arcana": "Emperor",
     "race": "Holy",
     "level": 51,
-    "hp": "null",
-    "mp": "null",
+    "hp": 363,
+    "mp": 197,
     "stats": {
         "st": 38,
         "vi": 30,
@@ -15843,8 +15843,8 @@
     "arcana": "Death",
     "race": "Fallen",
     "level": 36,
-    "hp": "null",
-    "mp": "null",
+    "hp": 276,
+    "mp": 189,
     "stats": {
         "st": 24,
         "vi": 25,
@@ -16142,8 +16142,8 @@
     "arcana": "Aeon",
     "race": "Megami",
     "level": 31,
-    "hp": "null",
-    "mp": "null",
+    "hp": 269,
+    "mp": 204,
     "stats": {
         "st": 19,
         "vi": 20,
@@ -16205,8 +16205,8 @@
     "arcana": "Star",
     "race": "Vile",
     "level": 75,
-    "hp": "null",
-    "mp": "null",
+    "hp": 666,
+    "mp": 494,
     "stats": {
         "st": 50,
         "vi": 36,
@@ -16436,8 +16436,8 @@
     "arcana": "Hunger",
     "race": "Fury",
     "level": 68,
-    "hp": "null",
-    "mp": "null",
+    "hp": 632,
+    "mp": 281,
     "stats": {
         "st": 47,
         "vi": 40,
@@ -16504,8 +16504,8 @@
     "arcana": "Empress",
     "race": "Nymph",
     "level": 9,
-    "hp": "null",
-    "mp": "null",
+    "hp": 107,
+    "mp": 57,
     "stats": {
         "st": 7,
         "vi": 4,
@@ -17861,8 +17861,8 @@
     "arcana": "Temperance",
     "race": "Element",
     "level": 11,
-    "hp": "null",
-    "mp": "null",
+    "hp": 84,
+    "mp": 31,
     "stats": {
         "st": 8,
         "vi": 5,
@@ -18079,8 +18079,8 @@
     "arcana": "Tower",
     "race": "Vile",
     "level": 35,
-    "hp": "null",
-    "mp": "null",
+    "hp": 279,
+    "mp": 175,
     "stats": {
         "st": 20,
         "vi": 30,
@@ -18147,8 +18147,8 @@
     "arcana": "Hanged",
     "race": "Wilder",
     "level": 56,
-    "hp": "null",
-    "mp": "null",
+    "hp": 709,
+    "mp": 140,
     "stats": {
         "st": 40,
         "vi": 37,
@@ -18522,15 +18522,15 @@
     },
     "arcana": "Strength",
     "race": "Jirae",
-    "level": 14,
-    "hp": "null",
-    "mp": "null",
+    "level": 49,
+    "hp": 396,
+    "mp": 177,
     "stats": {
-        "st": 11,
-        "vi": 10,
-        "ma": 12,
-        "ag": 10,
-        "lu": 6
+        "st": 21,
+        "vi": 17,
+        "ma": 10,
+        "ag": 8,
+        "lu": 13
     },
     "learnset": [
         {
@@ -18666,8 +18666,8 @@
     "arcana": "Chariot",
     "race": "Fury",
     "level": 43,
-    "hp": "null",
-    "mp": "null",
+    "hp": 426,
+    "mp": 159,
     "stats": {
         "st": 33,
         "vi": 27,
@@ -18948,8 +18948,8 @@
     "arcana": "Priestess",
     "race": "Tyrant",
     "level": 70,
-    "hp": "400",
-    "mp": "246",
+    "hp": 400,
+    "mp": 246,
     "stats": {
         "st": 46,
         "vi": 41,
@@ -19021,8 +19021,8 @@
     "arcana": "Devil",
     "race": "Fallen",
     "level": 3,
-    "hp": "null",
-    "mp": "null",
+    "hp": 57,
+    "mp": 36,
     "stats": {
         "st": 3,
         "vi": 3,
@@ -19084,8 +19084,8 @@
     "arcana": "Lovers",
     "race": "Element",
     "level": 33,
-    "hp": "null",
-    "mp": "null",
+    "hp": 200,
+    "mp": 60,
     "stats": {
         "st": 21,
         "vi": 13,
@@ -19295,15 +19295,15 @@
     },
     "arcana": "Devil",
     "race": "Haunt",
-    "level": 19,
-    "hp": "null",
-    "mp": "null",
+    "level": 63,
+    "hp": 474,
+    "mp": 249,
     "stats": {
-        "st": 17,
-        "vi": 14,
-        "ma": 10,
-        "ag": 12,
-        "lu": 11
+        "st": 22,
+        "vi": 16,
+        "ma": 20,
+        "ag": 11,
+        "lu": 14
     },
     "learnset": [
         {
@@ -19596,14 +19596,14 @@
     },
     "arcana": "Temperance",
     "race": "Avatar",
-    "level": 16,
-    "hp": "null",
-    "mp": "null",
+    "level": 26,
+    "hp": 210,
+    "mp": 114,
     "stats": {
-        "st": 14,
+        "st": 13,
         "vi": 9,
         "ma": 12,
-        "ag": 13,
+        "ag": 9,
         "lu": 7
     },
     "learnset": [
@@ -19899,8 +19899,8 @@
     "arcana": "Hanged",
     "race": "Holy",
     "level": 49,
-    "hp": "null",
-    "mp": "null",
+    "hp": 329,
+    "mp": 257,
     "stats": {
         "st": 32,
         "vi": 27,
@@ -19972,8 +19972,8 @@
     "arcana": "Fool",
     "race": "Femme",
     "level": 2,
-    "hp": "null",
-    "mp": "null",
+    "hp": 41,
+    "mp": 21,
     "stats": {
         "st": 2,
         "vi": 7,
